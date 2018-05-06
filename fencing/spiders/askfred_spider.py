@@ -99,7 +99,22 @@ class FredSpider(scrapy.Spider):
     def parse_pool(self, response):
         event_id = response.meta['event_id']
         yield {'event_id': event_id, 'pool_url': response.url}
+        pool_list = response.css('table.pool_table')
+        for pool in pool_list:
+            pool_dict = {'event_id': event_id}
+            pool_dict['pool'] = pool.css('th::text').extract_first()
 
+            pool_dict['fencers'] = []
+            # The first two rows are for the title and column headers, we don't need them
+            fencer_list = pool.css('tr')[2:]
+            for fencer in fencer_list:
+                fencer_dict = {}
+                fencer_dict['name'] = fencer.css('td.comp::text').extract_first()
+                fencer_dict['pool_no'] = fencer.css('td.comp_no b::text').extract_first()
+                fencer_dict['results'] = fencer.css('td.comp_no ~ td[class=""]::text').extract()
+                pool_dict['fencers'].append(fencer_dict)
+            yield pool_dict
+              
 
     def parse_de(self, response):
         event_id = response.meta['event_id']
