@@ -1,1 +1,78 @@
-{"delim_url": "https://askfred.net/Results/roundResults.php?event_id=146786&seq=2&highlight_competitor_id=", "tmt_id": "37163", "event_id": "146786", "rounds": [{"round_no": 1, "results": ["\u00a0(1)\u00a0Patil, Aaryan : ", "\u00a0(16)\u00a0Brubaker, Bronson : ", "\u00a0(9)\u00a0Cook, Cole : ", "\u00a0(8)\u00a0Tao, Jeffrey : ", "\u00a0(5)\u00a0Sheres, Asher : ", "\u00a0(12)\u00a0Wang, Kyle : ", "\u00a0(13)\u00a0Arnold, Hali : ", "\u00a0(4)\u00a0Chen, Lohen : ", "\u00a0(3)\u00a0Qiu, Nathan : ", "\u00a0(14)\u00a0Fu, Eunice : ", "\u00a0(11)\u00a0Brum, Charles : ", "\u00a0(6)\u00a0Wang, Sophia : ", "\u00a0(7)\u00a0Okba, Noah : ", "\u00a0(10)\u00a0Brown, Brandon : ", "\u00a0(15)\u00a0Lo, Chloe : ", "\u00a0(2)\u00a0Piec, Patrick : "]}, {"round_no": 2, "results": ["\u00a0(1)\u00a0Patil, Aaryan : ", "\u00a010 - 0", "\u00a0(9)\u00a0Cook, Cole : ", "\u00a010 - 7", "\u00a0(5)\u00a0Sheres, Asher : ", "\u00a010 - 1", "\u00a0(4)\u00a0Chen, Lohen : ", "\u00a03 - 10", "\u00a0(3)\u00a0Qiu, Nathan : ", "\u00a010 - 2", "\u00a0(6)\u00a0Wang, Sophia : ", "\u00a02 - 10", "\u00a0(10)\u00a0Brown, Brandon : ", "\u00a03 - 10", "\u00a0(2)\u00a0Piec, Patrick : ", "\u00a05 - 10"]}, {"round_no": 3, "results": ["\u00a0(1)\u00a0Patil, Aaryan : ", "\u00a010 - 4", "\u00a0(5)\u00a0Sheres, Asher : ", "\u00a010 - 5", "\u00a0(3)\u00a0Qiu, Nathan : ", "\u00a010 - 6", "\u00a0(2)\u00a0Piec, Patrick : ", "\u00a07 - 10"]}, {"round_no": 4, "results": ["\u00a0(1)\u00a0Patil, Aaryan : ", "\u00a010 - 4", "\u00a0(3)\u00a0Qiu, Nathan : ", "\u00a010 - 2"]}, {"round_no": 5, "results": ["\u00a0(3)\u00a0Qiu, Nathan : ", "\u00a06 - 10"]}]}
+{
+    "delim_url": "https://askfred.net/Results/roundResults.php?event_id=146786&seq=2&highlight_competitor_id=",
+    "tmt_id": "37163",
+    "event_id": "146786",
+    "rounds": [
+        {
+            "round_no": 1,
+            "results": [
+                "\u00a0(1)\u00a0Patil, Aaryan : ",
+                "\u00a0(16)\u00a0Brubaker, Bronson : ",
+                "\u00a0(9)\u00a0Cook, Cole : ",
+                "\u00a0(8)\u00a0Tao, Jeffrey : ",
+                "\u00a0(5)\u00a0Sheres, Asher : ",
+                "\u00a0(12)\u00a0Wang, Kyle : ",
+                "\u00a0(13)\u00a0Arnold, Hali : ",
+                "\u00a0(4)\u00a0Chen, Lohen : ",
+                "\u00a0(3)\u00a0Qiu, Nathan : ",
+                "\u00a0(14)\u00a0Fu, Eunice : ",
+                "\u00a0(11)\u00a0Brum, Charles : ",
+                "\u00a0(6)\u00a0Wang, Sophia : ",
+                "\u00a0(7)\u00a0Okba, Noah : ",
+                "\u00a0(10)\u00a0Brown, Brandon : ",
+                "\u00a0(15)\u00a0Lo, Chloe : ",
+                "\u00a0(2)\u00a0Piec, Patrick : "
+            ]
+        },
+        {
+            "round_no": 2,
+            "results": [
+                "\u00a0(1)\u00a0Patil, Aaryan : ",
+                "\u00a010 - 0",
+                "\u00a0(9)\u00a0Cook, Cole : ",
+                "\u00a010 - 7",
+                "\u00a0(5)\u00a0Sheres, Asher : ",
+                "\u00a010 - 1",
+                "\u00a0(4)\u00a0Chen, Lohen : ",
+                "\u00a03 - 10",
+                "\u00a0(3)\u00a0Qiu, Nathan : ",
+                "\u00a010 - 2",
+                "\u00a0(6)\u00a0Wang, Sophia : ",
+                "\u00a02 - 10",
+                "\u00a0(10)\u00a0Brown, Brandon : ",
+                "\u00a03 - 10",
+                "\u00a0(2)\u00a0Piec, Patrick : ",
+                "\u00a05 - 10"
+            ]
+        },
+        {
+            "round_no": 3,
+            "results": [
+                "\u00a0(1)\u00a0Patil, Aaryan : ",
+                "\u00a010 - 4",
+                "\u00a0(5)\u00a0Sheres, Asher : ",
+                "\u00a010 - 5",
+                "\u00a0(3)\u00a0Qiu, Nathan : ",
+                "\u00a010 - 6",
+                "\u00a0(2)\u00a0Piec, Patrick : ",
+                "\u00a07 - 10"
+            ]
+        },
+        {
+            "round_no": 4,
+            "results": [
+                "\u00a0(1)\u00a0Patil, Aaryan : ",
+                "\u00a010 - 4",
+                "\u00a0(3)\u00a0Qiu, Nathan : ",
+                "\u00a010 - 2"
+            ]
+        },
+        {
+            "round_no": 5,
+            "results": [
+                "\u00a0(3)\u00a0Qiu, Nathan : ",
+                "\u00a06 - 10"
+            ]
+        }
+    ]
+}

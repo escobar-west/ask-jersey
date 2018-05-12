@@ -1,1 +1,188 @@
-{"pool_url": "https://askfred.net/Results/roundResults.php?seq=1&event_id=146786", "tmt_id": "37163", "event_id": "146786", "pools": [{"pool_no": "Pool #1", "fencers": [{"name": " Brum, Charles : ", "pool_pos": "1", "results": ["V5", "D1", "D1", "V5", "D3"]}, {"name": " Fu, Eunice : ", "pool_pos": "2", "results": ["D2", "D1", "D1", "V5", "D0"]}, {"name": " Patil, Aaryan : ", "pool_pos": "3", "results": ["V5", "V5", "V5", "V5", "V5"]}, {"name": " Sheres, Asher : ", "pool_pos": "4", "results": ["V5", "V5", "D1", "D4", "V5"]}, {"name": " Arnold, Hali : ", "pool_pos": "5", "results": ["D3", "D4", "D1", "V5", "D1"]}, {"name": " Wang, Sophia : ", "pool_pos": "6", "results": ["V5", "V5", "D3", "D0", "V5"]}]}, {"pool_no": "Pool #2", "fencers": [{"name": " Piec, Patrick : ", "pool_pos": "1", "results": ["V5", "V5", "V5", "V5"]}, {"name": " Chen, Lohen : ", "pool_pos": "2", "results": ["D1", "V5", "V5", "V5"]}, {"name": " Wang, Kyle : ", "pool_pos": "3", "results": ["D0", "D0", "V5", "D0"]}, {"name": " Brubaker, Bronson : ", "pool_pos": "4", "results": ["D0", "D1", "D2", "D0"]}, {"name": " Okba, Noah : ", "pool_pos": "5", "results": ["D3", "D1", "V5", "V5"]}]}, {"pool_no": "Pool #3", "fencers": [{"name": " Tao, Jeffrey : ", "pool_pos": "1", "results": ["V5", "D3", "D2", "V5"]}, {"name": " Brown, Brandon : ", "pool_pos": "2", "results": ["D1", "D0", "V5", "V5"]}, {"name": " Qiu, Nathan : ", "pool_pos": "3", "results": ["V5", "V5", "V5", "V5"]}, {"name": " Cook, Cole : ", "pool_pos": "4", "results": ["V5", "D0", "D2", "V5"]}, {"name": " Lo, Chloe : ", "pool_pos": "5", "results": ["D2", "D2", "D0", "D1"]}]}]}
+{
+    "pool_url": "https://askfred.net/Results/roundResults.php?seq=1&event_id=146786",
+    "tmt_id": "37163",
+    "event_id": "146786",
+    "pools": [
+        {
+            "pool_no": "Pool #1",
+            "fencers": [
+                {
+                    "name": " Brum, Charles : ",
+                    "pool_pos": "1",
+                    "results": [
+                        "V5",
+                        "D1",
+                        "D1",
+                        "V5",
+                        "D3"
+                    ]
+                },
+                {
+                    "name": " Fu, Eunice : ",
+                    "pool_pos": "2",
+                    "results": [
+                        "D2",
+                        "D1",
+                        "D1",
+                        "V5",
+                        "D0"
+                    ]
+                },
+                {
+                    "name": " Patil, Aaryan : ",
+                    "pool_pos": "3",
+                    "results": [
+                        "V5",
+                        "V5",
+                        "V5",
+                        "V5",
+                        "V5"
+                    ]
+                },
+                {
+                    "name": " Sheres, Asher : ",
+                    "pool_pos": "4",
+                    "results": [
+                        "V5",
+                        "V5",
+                        "D1",
+                        "D4",
+                        "V5"
+                    ]
+                },
+                {
+                    "name": " Arnold, Hali : ",
+                    "pool_pos": "5",
+                    "results": [
+                        "D3",
+                        "D4",
+                        "D1",
+                        "V5",
+                        "D1"
+                    ]
+                },
+                {
+                    "name": " Wang, Sophia : ",
+                    "pool_pos": "6",
+                    "results": [
+                        "V5",
+                        "V5",
+                        "D3",
+                        "D0",
+                        "V5"
+                    ]
+                }
+            ]
+        },
+        {
+            "pool_no": "Pool #2",
+            "fencers": [
+                {
+                    "name": " Piec, Patrick : ",
+                    "pool_pos": "1",
+                    "results": [
+                        "V5",
+                        "V5",
+                        "V5",
+                        "V5"
+                    ]
+                },
+                {
+                    "name": " Chen, Lohen : ",
+                    "pool_pos": "2",
+                    "results": [
+                        "D1",
+                        "V5",
+                        "V5",
+                        "V5"
+                    ]
+                },
+                {
+                    "name": " Wang, Kyle : ",
+                    "pool_pos": "3",
+                    "results": [
+                        "D0",
+                        "D0",
+                        "V5",
+                        "D0"
+                    ]
+                },
+                {
+                    "name": " Brubaker, Bronson : ",
+                    "pool_pos": "4",
+                    "results": [
+                        "D0",
+                        "D1",
+                        "D2",
+                        "D0"
+                    ]
+                },
+                {
+                    "name": " Okba, Noah : ",
+                    "pool_pos": "5",
+                    "results": [
+                        "D3",
+                        "D1",
+                        "V5",
+                        "V5"
+                    ]
+                }
+            ]
+        },
+        {
+            "pool_no": "Pool #3",
+            "fencers": [
+                {
+                    "name": " Tao, Jeffrey : ",
+                    "pool_pos": "1",
+                    "results": [
+                        "V5",
+                        "D3",
+                        "D2",
+                        "V5"
+                    ]
+                },
+                {
+                    "name": " Brown, Brandon : ",
+                    "pool_pos": "2",
+                    "results": [
+                        "D1",
+                        "D0",
+                        "V5",
+                        "V5"
+                    ]
+                },
+                {
+                    "name": " Qiu, Nathan : ",
+                    "pool_pos": "3",
+                    "results": [
+                        "V5",
+                        "V5",
+                        "V5",
+                        "V5"
+                    ]
+                },
+                {
+                    "name": " Cook, Cole : ",
+                    "pool_pos": "4",
+                    "results": [
+                        "V5",
+                        "D0",
+                        "D2",
+                        "V5"
+                    ]
+                },
+                {
+                    "name": " Lo, Chloe : ",
+                    "pool_pos": "5",
+                    "results": [
+                        "D2",
+                        "D2",
+                        "D0",
+                        "D1"
+                    ]
+                }
+            ]
+        }
+    ]
+}
