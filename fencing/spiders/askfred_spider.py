@@ -1,4 +1,6 @@
 import re
+import json
+from os.path import join
 import scrapy
 
 class FredSpider(scrapy.Spider):
@@ -10,7 +12,6 @@ class FredSpider(scrapy.Spider):
 
 
     def parse_home(self, response):
-        res_dict = {'page_url':response.url, 'tmts': []}
         # Scrape data for each tournament
         tmt_list = response.css('.evenrow, .oddrow')
         for tmt in tmt_list:
@@ -25,19 +26,18 @@ class FredSpider(scrapy.Spider):
                 # Visit tournament page if it exists
                 yield scrapy.Request(response.urljoin(tmt_url),
                                      callback=self.parse_tmt,
-                                     meta={'tmt_id':tmt_dict['tmt_id']}
+                                     meta={'tmt_dict':tmt_dict}
                                     )
-                res_dict['tmts'].append(tmt_dict)
-        yield res_dict
         # Go to next page if exists
         next_url = response.css('a[title="Next Page"]::attr(href)').extract_first()
-        if (next_url is not None) and ('page_id=3' not in next_url):
+        if (next_url is not None) and ('page_id=10' not in next_url):
             yield scrapy.Request(response.urljoin(next_url), callback=self.parse_home)
 
 
     def parse_tmt(self, response):
-        tmt_id = response.meta['tmt_id']
-        res_dict = {'tmt_url':response.url, 'tmt_id': tmt_id, 'events': []}
+        tmt_dict = response.meta['tmt_dict']
+        tmt_dict['tmt_url'] = response.url
+        tmt_dict['events'] = []
         # Scrape data for each event
         event_list = response.css('table.box')
         for event in event_list:
@@ -60,13 +60,14 @@ class FredSpider(scrapy.Spider):
                     fencer_dict['rating'] = fencer_cols[3].css('::text').extract_first()
                     fencer_dict['rating_earned'] = fencer_cols[4].css('::text').extract_first()
                     event_dict['fencers'].append(fencer_dict)
-                res_dict['events'].append(event_dict)
+                tmt_dict['events'].append(event_dict)
                 # Go to round results if they exist
                 yield scrapy.Request(response.urljoin(event_url),
                                      callback=self.parse_round,
-                                     meta={'tmt_id':tmt_id, 'event_id':event_dict['event_id']}
+                                     meta={'tmt_id':tmt_dict['tmt_id'], 'event_id':event_dict['event_id']}
                                     )
-        yield res_dict
+        with open(join('output', 'tmt', '{}.TMT.json'.format(tmt_dict['tmt_id'])), 'w') as f:
+            json.dump(tmt_dict, f)
 
 
     def parse_round(self, response):
@@ -76,7 +77,7 @@ class FredSpider(scrapy.Spider):
             for output in self.parse_pool(response):
                 yield output
         elif 'Direct Elimination' in title:
-            for output in self.parse_de(response):
+            for output in self.parse_delim(response):
                 yield output
         # Go to next round if it exists
         next_url = response.css('td[align="right"][valign="bottom"] a::attr(href)').extract_first()
@@ -106,13 +107,15 @@ class FredSpider(scrapy.Spider):
                 fencer_dict['results'] = fencer.css('td.comp_no ~ td[class=""]::text').extract()
                 pool_dict['fencers'].append(fencer_dict)
             res_dict['pools'].append(pool_dict)
-        yield res_dict
-              
+        seq_no = re.search('seq=(\d+)', res_dict['pool_url']).group(1)
+        with open(join('output', 'pool', '{}.{}.{}.POOL.json'.format(tmt_id, event_id, seq_no)), 'w') as f:
+            json.dump(res_dict, f)
+        yield      
 
-    def parse_de(self, response):
+    def parse_delim(self, response):
         tmt_id = response.meta['tmt_id']
         event_id = response.meta['event_id']
-        res_dict = {'de_url': response.url, 'tmt_id': tmt_id, 'event_id': event_id, 'rounds': []}
+        res_dict = {'delim_url': response.url, 'tmt_id': tmt_id, 'event_id': event_id, 'rounds': []}
         table_rows = response.css('div.debox table tr')[1:] # Remove first title row
         # Counter counts which round is being scraped (why does askfred use so many tables???)
         counter = 1
@@ -121,4 +124,7 @@ class FredSpider(scrapy.Spider):
             res_dict['rounds'].append({'round_no': counter, 'results': round_results})
             counter += 1
             round_results = table_rows.css(f'td:nth-child({counter}) a[onclick*=highlight]::text').extract()
-        yield res_dict
+        seq_no = re.search('seq=(\d+)', res_dict['delim_url']).group(1)
+        with open(join('output', 'delim', '{}.{}.{}.DELIM.json'.format(tmt_id, event_id, seq_no)), 'w') as f:
+            json.dump(res_dict, f)
+        yield
