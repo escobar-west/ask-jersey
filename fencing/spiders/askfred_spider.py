@@ -29,9 +29,12 @@ class FredSpider(scrapy.Spider):
                                      meta={'tmt_dict':tmt_dict}
                                     )
         # Go to next page if exists
-        next_url = response.css('a[title="Next Page"]::attr(href)').extract_first()
-        if (next_url is not None) and ('page_id=10' not in next_url):
-            yield scrapy.Request(response.urljoin(next_url), callback=self.parse_home)
+        counter = 2
+        while(counter < 2000):
+            next_url = f'https://askfred.net/Results/past.php?page_id={counter}'
+            if (next_url is not None):
+                yield scrapy.Request(response.urljoin(next_url), callback=self.parse_home)
+            counter += 1
 
 
     def parse_tmt(self, response):
